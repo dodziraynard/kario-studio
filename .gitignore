@@ -2,3 +2,5 @@ target
 workspaces
 dist
 .env
+renders
+renders/
