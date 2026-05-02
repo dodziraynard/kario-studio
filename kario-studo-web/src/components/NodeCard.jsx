@@ -124,7 +124,6 @@ export default function NodeCard({
             <video
               ref={videoRef}
               src={node.videoUrl || '/video.mp4'}
-              muted
               loop
               playsInline
               preload="metadata"

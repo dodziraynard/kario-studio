@@ -52,7 +52,6 @@ export default function Lightbox({ open, node, onClose, onSnap }) {
           <video
             ref={vidRef}
             src="/video.mp4"
-            muted
             loop
             playsInline
             preload="metadata"

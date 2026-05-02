@@ -69,7 +69,6 @@ export default function Dashboard({
                     {renderUrl ? (
                       <video
                         src={renderUrl}
-                        muted
                         loop
                         playsInline
                         preload="metadata"
