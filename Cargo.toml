@@ -1,0 +1,15 @@
+[workspace]
+members = ["exporter-base", "crates/api"]
+exclude = ["storage"]
+resolver = "2"
+
+[workspace.dependencies]
+kario-base = { git = "ssh://git@github.com/karioai/kario.git", branch = "kariobase", version = "0.1.0" }
+kario-renderer = { git = "ssh://git@github.com/karioai/kario.git", branch = "kariobase", version = "0.1.0" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4"
+env_logger = "0.11"
+uuid = { version = "1", features = ["v4", "serde"] }
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"

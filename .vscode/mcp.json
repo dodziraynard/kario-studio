@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "MongoDB": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mongodb-mcp-server@latest"],
+      "env": {
+        "MDB_MCP_CONNECTION_STRING": "mongodb+srv://kario_db_user:zCcFSrP5Kk7d3BXQ@cluster0.ixcwby.mongodb.net/?appName=Cluster0"
+      }
+    }
+  }
+}
