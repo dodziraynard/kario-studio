@@ -132,7 +132,7 @@ fn read_current_scene(bw: &Path) -> String {
 const ELEVENLABS_VOICE_ID: &str = "JBFqnCBsd6RMkjVDRZzb"; // "George" — change as needed
 const WHISPERX_BIN: &str =
     "/Users/speechdata/repositories/kario-dataset/scripts/.venv/bin/whisperx";
-const FALLBACK_TEMPLATE: &str = "product_launch";
+const FALLBACK_TEMPLATE: &str = "simple";
 
 /// Call OpenAI text-embedding-3-small and return the 1536-dim vector.
 pub async fn embed_prompt(text: &str) -> Result<Vec<f64>> {
@@ -530,7 +530,11 @@ start time. The VO audio file is at `assets/vo.mp3` relative to the run dir.
 - **No paragraphs of text on screen.** Short labels, single keywords, or brief phrases only — never multi-sentence blocks.
 - **Use visual metaphors to support the voice-over.** Each scene beat should reinforce the narration with a concrete visual idea (icons, shapes, motion, colour transitions) rather than just repeating the words as text.
 
-## Current src/video_scene.rs (base template for reference)
+## Current src/video_scene.rs (starter template — edit in place)
+The template uses a `BEATS` array of `(start, dur, label, sublabel, accent)` structs.
+Replace the placeholder beats with real beats derived from the phrase timings above.
+Update `VO_DUR` and `SCENE_DUR` to match the actual audio length.
+Keep the rest of the structure (background, audio, faded_clip helper) unchanged.
 ```rust
 {current}
 ```
